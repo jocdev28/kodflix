@@ -1,0 +1,291 @@
+* {
+   margin: 0;
+   padding: 0;
+   font-family: 'Nunito Sans', sans-serif;
+   box-sizing: border-box;
+}
+body {
+   background-color: #000;
+}
+a {
+   text-decoration: none;
+}
+
+/* Navbar */
+.navbar {
+   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1));
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 1000;
+   padding: 0;
+   margin: 0;
+}
+.navlinks {
+   margin: auto;
+   width: 80%;
+   height: 5rem;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.logo {
+   font-size: 2.4rem;
+   font-weight: 700;
+   font-family: 'Roboto', sans-serif;
+   color: #f03030;
+   cursor: default;
+}
+span {
+   color: #fff;
+}
+.sign-up {
+   width: 80px;
+   height: 35px;
+   font-size: 13.8px;
+   font-weight: 600;
+   background-color: #d31212;
+   border: none;
+   color: #fff;
+   border-radius: 4px;
+   cursor: pointer;
+   transition: 0.3s;
+}
+.sign-up:hover {
+   background-color: #bb0d0d;
+}
+
+/* Hero Section */
+.hero {
+   height: 100vh;
+   margin-top: 16px;
+   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)), url(move_to_heaven.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   color: white;
+}
+/* Overlay on the backgroung image */
+.hero::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.5);
+   z-index: 1;
+}
+
+/* Content on the overlay (hero) */
+.hero-content {
+   position: relative;
+   z-index: 2;
+   width: 40vw;
+   margin-top: 4rem;
+}
+.hero-text {
+   width: 100%;
+}
+/* text before the email form */
+h1 {
+   margin-bottom: 1rem;
+   font-size: 3.1rem;
+   font-weight: 900;
+}
+.starts {
+   font-size: 1.2rem;
+   font-weight: 700;
+}
+.watch {
+   font-size: 1rem;
+   margin-top: 20px;
+   margin-bottom: 18px;
+}
+@media (max-width: 800px) {
+   .hero-content {
+      width: 90vw;
+   }
+}
+/* form elements */
+.form-content {
+   width: 95%;
+   height: 3.5rem;
+   margin: auto;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 0.5rem;
+}
+.email_address {
+   flex-grow: 2;
+   padding: 20px;
+   border: 0.3px solid #fff;
+   border-radius: 4px;
+   background-color: #ffffff00;
+   font-size: 17px;
+   color: #fff;
+}
+.get_started {
+   flex-grow: 1;
+   border-radius: 4px;
+   border: none;
+   background-color: #d31212;
+   color: #fff;
+   font-weight: 600;
+   font-size: 1.2rem;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: 0.25s;
+}
+.get_started:hover {
+   background-color: #bb0d0d;
+}
+.chevron-svg {
+   margin-left: 0.4rem;
+}
+
+/* Carousel */
+.divide {
+   margin: 5rem 0;
+   height: 4px;
+   border: none;
+   background-image: linear-gradient(to left, #000000, #bb0d0d, #000000);
+}
+.middle-section {
+   width: 80%;
+   margin: auto;
+}
+h3 {
+   color: #fff;
+   font-size: 1.5rem;
+   margin-top: 10%;
+}
+.carousel-cards {
+   padding: 3% 0;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   row-gap: 50px;
+}
+.carousel-card{
+   cursor: pointer;
+   transition: 0.25s ease-in-out;
+}
+.carousel-card:hover {
+   transform: scale(1.03);
+}
+.carousel-img {
+   width: 200px;
+   height: 250px;
+   border-radius: 10px;
+   object-fit: cover;
+}
+/* Reasons */
+.reason-cards {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   padding: 2% 0;
+   row-gap: 50px;
+}
+.reason-card {
+   width: 290px;
+   height: 290px;
+   padding: 20px;
+   background-image: linear-gradient(-215deg, #1f25799c, #2e103faa, #39134ea7);
+   border-radius: 15px;
+   display: flex;
+   flex-direction: column;
+}
+h4 {
+   color: #fff;
+   font-size: 23px;
+   margin-bottom: 20px;
+}
+.reason-card > p {
+   color: #bbb;
+}
+emoji {
+   margin-top: 50px;
+   font-size: 60px;
+   align-self: flex-end;
+}
+
+/* FAQs */
+.faq-container {
+   width: 80%;
+   margin: auto;
+}
+.dropdowns {
+   margin-top: 20px;
+}
+.faq {
+   width: 100%;
+   background-color: #3b3b3b;
+   border-radius: 3px;
+   color: #fff;
+   height: 70px;
+   margin-bottom: 10px;
+   padding: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   transition: 0.3s;
+}
+.faq:hover {
+   background-color: #4e4e4e;
+}
+.faq > p {
+   font-size: 20px;
+}
+.plus-icon > img {
+   width: 30px;
+   cursor: pointer;
+}
+.form2 {
+   width: 60%;
+   margin: auto;
+   text-align: center;
+   padding: 80px 0 40px 0;
+}
+.form2 > p {
+   color: #fff;
+   margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+   width: 70%;
+   margin: auto;
+   padding: 6rem 0;
+}
+.footer {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.footer-section > a {
+   display: block;
+   text-decoration: underline;
+   color: #d3d3d3;
+   font-size: 14px;
+}
+.copyright {
+   color: #bb0d0d;
+   margin-top: 3rem;
+   font-size: 14px;
+}
+@media (max-width: 800px) {
+   .footer {
+      grid-template-columns: 1fr 1fr;
+      row-gap: 50px;
+   }
+}
